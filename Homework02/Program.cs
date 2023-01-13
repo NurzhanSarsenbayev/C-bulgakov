@@ -4,7 +4,7 @@
 //a = 2 b = 10 -> max = 10
 //a = -9 b = -3 -> max = -3
 
-Console.WriteLine("Write two numbers ");
+Console.WriteLine("Type two numbers ");
 double numberA = Convert.ToDouble(Console.ReadLine());
 double numberB = Convert.ToDouble(Console.ReadLine());
 double maxNumber = numberA;
@@ -13,12 +13,12 @@ if (numberA > numberB)
 {
     maxNumber = numberA;
     minNumber = numberB;
-    Console.WriteLine($"{maxNumber} > {minNumber}");
+    Console.WriteLine($"a = {numberA}; b= {numberB} -> {maxNumber} > {minNumber}");
 }
 else
 {
     maxNumber = numberB;
     minNumber = numberA;
-    Console.WriteLine($"{maxNumber} > {minNumber}");
+    Console.WriteLine($"a = {numberA}; b = {numberB} -> {maxNumber} > {minNumber}");
 
 };
