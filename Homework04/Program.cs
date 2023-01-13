@@ -4,9 +4,11 @@
 //44 5 78 -> 78
 //22 3 9 -> 22
 
-Console.WriteLine("Type 3 numbers ");
+Console.WriteLine("Type first number ");
 double numberA = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Type second number ");
 double numberB = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Type third number ");
 double numberC = Convert.ToDouble(Console.ReadLine());
 
 double maxnumber = numberA;

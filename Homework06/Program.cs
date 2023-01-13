@@ -6,10 +6,10 @@
 
 Console.WriteLine("Type your number to determine if it's even or odd ");
 int numberA=Convert.ToInt32(Console.ReadLine());
-if (numberA%2 > 0)
+if (numberA%2 == 0)
 {
-    Console.WriteLine($"{numberA} -> odd");
+    Console.WriteLine($"{numberA} -> even");
 }
 else{
-    Console.WriteLine($"{numberA} -> even");
+    Console.WriteLine($"{numberA} -> odd");
 }

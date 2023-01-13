@@ -13,7 +13,7 @@ if (numberA > 0)
     while (count <= numberA)
     {
         
-        Console.Write($"{count}, ");
+        Console.Write($"{count} ");
         count = count + 2;
     }
 
