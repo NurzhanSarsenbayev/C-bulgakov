@@ -4,8 +4,9 @@
 //a = 2 b = 10 -> max = 10
 //a = -9 b = -3 -> max = -3
 
-Console.WriteLine("Type two numbers ");
+Console.WriteLine("Type first number ");
 double numberA = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Type second number ");
 double numberB = Convert.ToDouble(Console.ReadLine());
 double maxNumber = numberA;
 double minNumber = numberB;
