@@ -4,7 +4,7 @@
 //5 -> Пятница
 
 Console.WriteLine("Type your even number from 1 to 7 ");
-string numberA = (Console.ReadLine());
+string numberA = Console.ReadLine();
 if (numberA == "1")
 {
     Console.WriteLine("1 is for Monday");

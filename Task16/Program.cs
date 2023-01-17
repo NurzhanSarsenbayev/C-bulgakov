@@ -16,5 +16,9 @@ int num1 = Convert.ToInt32(Console.ReadLine());
 int num2 = Convert.ToInt32(Console.ReadLine());
 
 bool square = Square(num1, num2);
-if (square)  Console.WriteLine("Yes");
-else Console.WriteLine("No");
+
+//if (square)  Console.WriteLine("Yes");
+//else Console.WriteLine("No");
+
+string result = square ? "yes" : "no";
+Console.WriteLine(result);
