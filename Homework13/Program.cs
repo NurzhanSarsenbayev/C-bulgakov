@@ -23,7 +23,6 @@ int number = new Random().Next(-9999999,999999);
 Console.WriteLine($"Your number is {number}");
  if (number<0)
  number = number*-1;
- else number = number;
          if (number>100)
              {
                int result = thirdDigit(number);
