@@ -15,7 +15,7 @@
 
 double Distance(int point1,int point2,int point3, int point4)
 {
- return Math.Sqrt(Math.Pow((point3 - point1), 2) + Math.Pow((point4 - point2), 2));
+return Math.Sqrt(Math.Pow((point3 - point1), 2) + Math.Pow((point4 - point2), 2));
 }
 
 
