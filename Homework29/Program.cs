@@ -17,10 +17,22 @@ void PrintArray(int[] arr)
     {
         Console.Write($"{arr[i]}, ");
     }
-    Console.Write($"{arr[7]} -> ");
-    Console.Write($"[{arr[0]}, {arr[1]}, {arr[2]}, {arr[3]}, {arr[4]}, {arr[5]}, {arr[6]}, {arr[7]}]");
-    //Что бы получилось, как в примере. Чувствую, чо есть способ проще, но не смог его сам сделать. 
+    Console.Write($"{arr[arr.Length-1]} -> [");
+
+   
 }
 
-int[] array = GenerateArray(8);
+void PrintArray2(int[] arr)
+{
+for (int i = 0; i < arr.Length-1; i++)
+{
+    
+    Console.Write($"{arr[i]}, ");
+   
+}
+ Console.Write($"{arr[arr.Length-1]}]");
+}
+int[] array = GenerateArray(5);
 PrintArray(array);
+PrintArray2(array);
+ //Что бы получилось, как в примере. Чувствую, чо есть способ проще, но не смог его сам сделать. 
