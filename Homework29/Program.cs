@@ -19,7 +19,7 @@ void PrintArray(int[] arr)
     }
     Console.Write($"{arr[arr.Length-1]} -> [");
 
-   
+    //Что бы получилось, как в примере. Чувствую, чо есть способ проще, но не смог его сам сделать. 
 }
 
 void PrintArray2(int[] arr)
@@ -35,4 +35,4 @@ for (int i = 0; i < arr.Length-1; i++)
 int[] array = GenerateArray(5);
 PrintArray(array);
 PrintArray2(array);
- //Что бы получилось, как в примере. Чувствую, чо есть способ проще, но не смог его сам сделать. 
+
