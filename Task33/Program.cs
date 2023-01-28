@@ -21,26 +21,51 @@ void PrintArray(int[] array)
     {
         if (i < array.Length - 1) Console.Write($"{array[i]},");
         else Console.Write($"{array[i]}");
-        }
-Console.WriteLine("]");
+    }
+    Console.WriteLine("]");
 }
 
 bool FindNumber(int[] array, int num)
 {
-    
+
     for (int i = 0; i < array.Length; i++)
     {
         if (i == num) return true;
-       
+
     }
     return false;
 }
 
 
-int[] arr = GenerateArray(4,-4,4);
+int[] arr = GenerateArray(4, -4, 4);
 PrintArray(arr);
 Console.WriteLine("Type your number ");
 int number = Convert.ToInt32(Console.ReadLine());
-bool findnumber = FindNumber(arr,number);
+bool findnumber = FindNumber(arr, number);
 string result = findnumber ? "yes" : "no";
-Console.Write ($"{result}");
+Console.Write($"{result}");
+
+
+// // Поиск числа в массиве.
+// bool FindNumber(int[] array, int find)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] == find)
+//         {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+
+// // Создание массива, ввод числа пользователем, вызов функции
+// Console.WriteLine("Укажите длину массива:");
+// int sizeArray = Convert.ToInt32(Console.ReadLine());
+// int[] arrayNumb = CreateArrayRndInt(sizeArray, -9, 9);
+// PrintArray(arrayNumb);
+
+// Console.WriteLine("Укажите число для поиска:");
+// int numberToFind = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine(FindNumber(arrayNumb, numberToFind) ? "да" : "нет");
