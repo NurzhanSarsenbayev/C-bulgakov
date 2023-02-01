@@ -36,4 +36,4 @@ for (int i = 0; i < array.Length; i++)
 }
 int positiveValueArray = PositiveValueArray(array);
 PrintArray(array);
-Console.Write($" -> {positiveValueArray}");
+Console.Write($" -> {positiveValueArray} is amount of positive values in your array");
