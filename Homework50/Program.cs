@@ -39,26 +39,21 @@ void PrintMatrix(int[,] matrix)
     }
 }
 void FindMatrixValue(int[,] matrix, int row, int column)
- //Сделал метод с расчетом на то, что бы визуально было понятней на примере.
-// Отсчет начиная не с 0 индекса а с *первой* строки/колонны 
-
-                          
 {
-    int targetValue = default;
-    if ((row >= matrix.GetLength(0) || row > 0) && (column >= matrix.GetLength(1) || column > 0)) // тут вместо > 0, можно >-1
+    if ((row <= matrix.GetLength(0)-1 && row >= 0) && (column <= matrix.GetLength(1)-1 && column >= 0))
     {
+        int targetValue = default;
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
             for (int j = 0; j < matrix.GetLength(1); j++)
             {
-                if (i == row - 1 && j == column - 1)  
-                // if (i == row && j == column) Этот вариант более технически верный
+                if (i == row && j == column)
                 {
                     targetValue = matrix[i, j];
                 }
             }
         }
-        Console.WriteLine($"Value of in row {row} - column {column} is {targetValue}");
+                    Console.WriteLine($"Value of in row {row} - column {column} is {targetValue}");
     }
     else Console.WriteLine("Invalid index");
 }
