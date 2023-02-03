@@ -14,8 +14,8 @@ double[] PointsOfIntersection(double val1,double val2,double val3,double val4)
 {
     double[] arr= new double[2];
 
-    arr[0] = (val3 - val1)/(val2-val4);
-    arr[1] = val2*arr[0]+val1;
+    arr[0] = Math.Round((val3 - val1)/(val2-val4),2);
+    arr[1] = Math.Round(val2*arr[0]+val1,2);
     return arr;
 }
 
