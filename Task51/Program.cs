@@ -36,24 +36,17 @@ void PrintMatrix(int[,] matrix)
 int DiagonalValueSum(int[,] matrix)
 {
     int sum = default;
-    if (matrix.GetLength(1) > matrix.GetLength(0))
+    int size = matrix.GetLength(0);
+    if (matrix.GetLength(0) > matrix.GetLength(1)) size = matrix.GetLength(1);
+
+    for (int i = 0; i < size; i++)
     {
-        for (int i = 0; i < matrix.GetLength(0); i++)
-        {
-            sum += matrix[i, i];
-        }
-    }
-    else
-    {
-        for (int i = 0; i < matrix.GetLength(1); i++)
-        {
-            sum += matrix[i, i];
-        }
+        sum += matrix[i, i];
     }
     return sum;
 }
 
-int[,] matr = GenerateMatrixRndInt(6, 5, 0, 10);
+int[,] matr = GenerateMatrixRndInt(3, 4, 0, 10);
 PrintMatrix(matr);
 int diagonalValueSum = DiagonalValueSum(matr);
 Console.WriteLine();
