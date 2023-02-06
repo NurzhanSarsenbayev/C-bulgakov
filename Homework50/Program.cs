@@ -38,24 +38,25 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine();
     }
 }
-void FindMatrixValue(int[,] matrix, int row, int column)
+// void FindMatrixValue(int[,] matrix, int row, int column)
+// {
+//     int targetValue = default;
+//     if ((row <= matrix.GetLength(0)-1 && row >= 0) && (column <= matrix.GetLength(1)-1 && column >= 0))
+//     {
+//        targetValue = matrix[row, column];
+//        Console.WriteLine($"Value of in row {row} - column {column} is {targetValue}");
+//     }
+//     else Console.WriteLine("Invalid index");
+// }
+bool ValidIndex(int[,] matrix, int row, int column)
 {
-    if ((row <= matrix.GetLength(0)-1 && row >= 0) && (column <= matrix.GetLength(1)-1 && column >= 0))
-    {
-        int targetValue = default;
-        for (int i = 0; i < matrix.GetLength(0); i++)
-        {
-            for (int j = 0; j < matrix.GetLength(1); j++)
-            {
-                if (i == row && j == column)
-                {
-                    targetValue = matrix[i, j];
-                }
-            }
-        }
-                    Console.WriteLine($"Value of in row {row} - column {column} is {targetValue}");
-    }
-    else Console.WriteLine("Invalid index");
+    return (row <= matrix.GetLength(0)-1 && row >= 0) && (column <= matrix.GetLength(1)-1 && column >= 0);
+}
+
+int FindMatrixValue (int[,] matrix, int row, int column)
+{
+    int targetValue = matrix[row, column];
+    return targetValue;
 }
 int[,] matr = GenerateMatrixRndInt(4, 4, 0, 4);
 PrintMatrix(matr);
@@ -64,4 +65,7 @@ Console.WriteLine("Type in your row");
 int rowFind = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Type in your column");
 int columnFind = Convert.ToInt32(Console.ReadLine());
-FindMatrixValue(matr, rowFind, columnFind);
+// FindMatrixValue(matr,rowFind,columnFind);
+bool validIndex = ValidIndex(matr,rowFind,columnFind);
+string result = validIndex ? $"Value of in row {rowFind} - column {columnFind} is {FindMatrixValue(matr,rowFind,columnFind)}" : "Invalid index";
+Console.WriteLine($"{result}");
