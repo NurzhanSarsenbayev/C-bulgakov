@@ -32,8 +32,25 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine();
     }
 }
-void MeanRow(int[,] matrix)
+// void MeanRow(int[,] matrix)
+// {
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {
+//         double mean = default;
+//         double count = default;
+//         for (int i = 0; i < matrix.GetLength(0); i++)
+//         {
+//             mean += matrix[i, j];
+//             count++;
+//         }
+//         mean = Math.Round(mean / count, 1);
+//         Console.Write($"{mean,7}");
+//     }
+// }
+double[] MeanRow(int[,] matrix)
 {
+    double[] meanRow = new double[matrix.GetLength(1)];
+    int k = 0;
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
         double mean = default;
@@ -43,11 +60,26 @@ void MeanRow(int[,] matrix)
             mean += matrix[i, j];
             count++;
         }
-        mean = Math.Round(mean / count, 1);
-        Console.Write($"{mean,7}");
+        meanRow[k] = Math.Round(mean / count, 1);
+        k++;
     }
+    return meanRow;
 }
-int[,] matr = GenerateMatrixRndInt(5, 4, 0, 10);
+void PrintDoubleArray(double[] array)
+{
+    Console.Write("|");
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (i < array.Length - 1) Console.Write($"{array[i],5} |");
+        else Console.Write($"{array[i],5}");
+    }
+    Console.WriteLine(" |");
+}
+int[,] matr = GenerateMatrixRndInt(4, 4, 0, 10);
 PrintMatrix(matr);
 Console.WriteLine("");
-MeanRow(matr);
+// MeanRow(matr);
+double[] mean = MeanRow(matr);
+Console.WriteLine("v Means of values in columns v");
+Console.WriteLine("");
+PrintDoubleArray(mean);
