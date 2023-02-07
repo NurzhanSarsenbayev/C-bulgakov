@@ -79,3 +79,16 @@ else Console.WriteLine("Invalid Matrix");
 // Console.WriteLine();
 // int[,] replacingRowsWithColumns = ReplacingRowsWithColumns(matrix2);
 // PrintMatrix(replacingRowsWithColumns);
+
+// void ChangeRowsOnColumns(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0) - 1; i++)
+//     {
+//         for (int j = i + 1; j < matrix.GetLength(1); j++)
+//         {
+//             int temporary = matrix[i, j];
+//             matrix[i, j] = matrix[j, i];
+//             matrix[j, i] = temporary;
+//         }
+//     }
+// }
