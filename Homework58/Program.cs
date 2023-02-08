@@ -57,10 +57,10 @@ int[,] MatrixMultiplier(int[,]matrixA , int[,] matrixB)
 
 int[,] matrA = GenerateMatrixRndInt(2,2,1,5);
 int[,] matrB = GenerateMatrixRndInt(2,2,1,5);
-PrintMatrix(matr);
+PrintMatrix(matrA);
 Console.WriteLine();
-PrintMatrix(matr2);
-bool invalid=isValidForMultiplication(matr, matr2);
+PrintMatrix(matrB);
+bool invalid=isValidForMultiplication(matrA, matrB);
 Console.WriteLine();
 if (invalid == true)
 {
@@ -68,7 +68,7 @@ Console.WriteLine("Invalid matrixes. Amount of columns of first matrix isn't equ
 }
 else
 {
-int[,] result = MatrixMultiplier(matr,matr2);
+int[,] result = MatrixMultiplier(matrA,matrB);
 Console.WriteLine();
 PrintMatrix(result);
 }
