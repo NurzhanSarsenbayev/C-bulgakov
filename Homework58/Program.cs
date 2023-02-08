@@ -55,8 +55,8 @@ int[,] MatrixMultiplier(int[,]matrixA , int[,] matrixB)
     }
 }
 
-int[,] matr = GenerateMatrixRndInt(2,2,1,5);
-int[,] matr2 = GenerateMatrixRndInt(2,2,1,5);
+int[,] matrA = GenerateMatrixRndInt(2,2,1,5);
+int[,] matrB = GenerateMatrixRndInt(2,2,1,5);
 PrintMatrix(matr);
 Console.WriteLine();
 PrintMatrix(matr2);
