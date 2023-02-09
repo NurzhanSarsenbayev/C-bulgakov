@@ -67,7 +67,7 @@ int[,] FrequencyVocabulary(int[] array)
     int vocabularyCounter = 1;
     for (int i = 0; i < array.Length - 1; i++)
     {
-        if (array[i] != array[i + 1] && vocabulary[0, 0] != array[i])
+        if (array[i] != array[i + 1])
         {
             vocabulary[m, 0] = array[i];
             vocabulary[m, 1] = vocabularyCounter;
