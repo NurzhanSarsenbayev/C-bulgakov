@@ -33,7 +33,7 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine();
     }
 }
-int[,] SortMatrixValueUp(int[,] matrix)
+int[,] SortMatrixValueDown(int[,] matrix)
 {
     int temp;
     int i = 0;
@@ -56,8 +56,8 @@ int[,] SortMatrixValueUp(int[,] matrix)
     }
     return matrix;
 }
-int[,] matrixHomework = GenerateMatrixRndInt(5, 5, 2, 100);
+int[,] matrixHomework = GenerateMatrixRndInt(5, 5, 1, 10);
 PrintMatrix(matrixHomework);
 Console.WriteLine();
-int[,] matrixHomework2 = SortMatrixValueUp(matrixHomework);
+int[,] matrixHomework2 = SortMatrixValueDown(matrixHomework);
 PrintMatrix(matrixHomework2);
