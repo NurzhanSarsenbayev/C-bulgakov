@@ -61,9 +61,9 @@ PrintMatrix(matrA);
 Console.WriteLine();
 PrintMatrix(matrB);
 bool invalid=isValidForMultiplication(matrA, matrB);
-Console.WriteLine();
 if (invalid == true)
 {
+Console.WriteLine();
 Console.WriteLine("Invalid matrixes. Amount of columns of first matrix isn't equal to amount of rows of second matrix");
 }
 else
