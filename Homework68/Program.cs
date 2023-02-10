@@ -14,5 +14,9 @@ int AckermannFunction(int num1, int num2)
         return AckermannFunction(num1 - 1, AckermannFunction(num1, num2 - 1));
 }
 
-int ackermannFunction = AckermannFunction(3, 2);
-Console.WriteLine($"m=2 n=3  ->  {ackermannFunction}");
+Console.WriteLine("Type in your first number");
+int number1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Type in your first number");
+int number2 = Convert.ToInt32(Console.ReadLine());
+int ackermannFunction = AckermannFunction(number1, number2);
+Console.WriteLine($"m = {number1} , n = {number2}  ->  {ackermannFunction}");
